@@ -31,7 +31,10 @@
 		<!-- <div id="header-wrapper" class="secondaryActive"> -->				
 			
 			<div id="header-logo">
+			<div id="header-logo">
 				<a href="index.html" title="Return to the homepage" target="_self">
+					<img id="headerLogoDesktop" src="images/GOLogo(desktop).svg" onerror="this.onerror=null; this.src='images/GOLogo(desktop).png'" style="vertical-align: middle" alt="Glasgow Online Logo">
+					<img id="headerLogoMobile" src="images/GOLogo(mobile).svg" onerror="this.onerror=null; this.src='images/GOLogo(mobile).png'" style="vertical-align: middle" alt="Glasgow Online Logo">
 					<img id="headerLogoDesktop" src="images/GOLogo(desktop).svg" onerror="this.onerror=null; this.src='images/GOLogo(desktop).png'" style="vertical-align: middle" alt="Glasgow Online Logo">
 					<img id="headerLogoMobile" src="images/GOLogo(mobile).svg" onerror="this.onerror=null; this.src='images/GOLogo(mobile).png'" style="vertical-align: middle" alt="Glasgow Online Logo">
 				</a>
@@ -474,8 +477,11 @@
     	
 	
 	<div class="page-wrapper" id="page">
+	<div class="page-wrapper" id="page">
 		
 		
+		<div id="breadcrumbs">
+			<div class="breadcrumbs-wrapper flex-row">
 		<div id="breadcrumbs">
 			<div class="breadcrumbs-wrapper flex-row">
 			
@@ -502,10 +508,79 @@
 				<!--Body text-->
 				<div id="page-body">
 					
-					<p>We respect your right to privacy and your choices regarding your data. We need to process some of your personal information when you’re using our tools, but we go to great lengths to keep your digital footprint small, safe, and in your control. If you have any questions about your privacy on Glasgow Online, please reach out to our <a href="mailto:dataprotection@glasgow.gov.uk" title="Email GCC's Data Protection Officer" target="_self">Data Protection Officer</a>.</p>
+					<p>We respect your right to privacy and your choices regarding your data. We need to process some of your personal information when you're using the Glasgow Online websites ("<strong>Services</strong>"), but we go to great lengths to keep your digital footprint small, safe, and in your control. If you have any questions about your privacy on Glasgow Online, please reach out to our <a href="mailto:dataprotection@glasgow.gov.uk" title="Email GCC's Data Protection Officer" target="_self">Data Protection Officer</a>.</p>
 
+					<h2>What information do we collect</h2>
+					<p>We collect information in two ways:
+
+					<ul>
+						<li>Information you provide</li>
+						<li>Information we collect automatically</li>
+					</ul> 
+
+					<section class="accordion-table">
+						<h3 class="accordion-table-title">Information you provide</h3>
+						<p class="accordion-table-description">
+						  This section describes the information that you typically provide when you are using our Services (with or without account). This information is collected when you reach out to us with feedback.
+						</p>
+						<div class="accordion-table-content" id="info-provided-accordion-table-content" role="region" aria-labelledby="info-provided-accordion-table-toggle" hidden="">
+						  <table class="accordion-table" cellpadding="0" cellspacing="0">
+							<tbody><tr class="accordion-table-header">
+							  <th>Category</th>
+							  <th>Description</th>
+							</tr>
+							  <tr class="accordion-table-entry">
+								<td>
+								  User information
+								</td>
+								<td>
+								  We collect this information when you use our Services. We collect this information when you participate in submitting feedback. Examples include your name and email address
+								</td>
+							  </tr>
+						  </tbody></table>
+						</div>
+						 <button class="accordion-table__toggle" id="info-provided-accordion-table-toggle" aria-controls="info-provided-accordion-table-content" aria-expanded="false">
+							 <span class="accordion-table__toggle-label accordion-table__toggle-label--show">
+							Show information you provide</span>
+							 <span class="accordion-table__toggle-label accordion-table__toggle-label--hide">
+							Hide information you provide
+						  </span>
+						  </button>
+
+					</section><section class="accordion-table">
+						<h3 class="accordion-table-title">Information we collect automatically when you use our Services</h3>
+						<!-- <p class="accordion-table-description">
+						  This section describes the information that you typically provide when you are using the Glasgow Online websites (with or without account). This information is collected when you reach out to us with feedback.
+						</p> -->
+						<div class="accordion-table-content" id="tech-info-accordion-table-content" role="region" aria-labelledby="tech-info-accordion-table-toggle" hidden="">
+						  <table class="accordion-table" cellpadding="0" cellspacing="0">
+							<tbody><tr class="accordion-table-header">
+							  <th>Category</th>
+							  <th>Description</th>
+							</tr>
+							  <tr class="accordion-table-entry">
+								<td>
+								  Technical Information
+								</td>
+								<td>
+								  We collect certain network connection information when you access the Services. This information includes your IP address. We automatically assign you a user ID. 
+								  Cookie information. We make use of cookies and other technologies to operate our Services and for preference management. Read the section “Mange cookies" to learn more.
+								</td>
+							  </tr>
+						  </tbody></table>
+						</div>
+						 <button class="accordion-table__toggle" id="tech-info-accordion-table-toggle" aria-controls="tech-info-accordion-table-content" aria-expanded="false">
+							 <span class="accordion-table__toggle-label accordion-table__toggle-label--show">
+							Show information you provide</span>
+							 <span class="accordion-table__toggle-label accordion-table__toggle-label--hide">
+							Hide information you provide
+						  </span>
+						  </button>
+
+					</section>
+					
 					<h2>Manage cookies</h2>
-					<p>We use cookies to store relevant data to optimise your experience on Glasgow Online.</p>
+					<p>We use cookies to store relevant data to optimise your experience on Glasgow Online. We place cookies with the intention of making Glasgow Online even better. We work hard to make our Services safe, beautiful and unobtrusive. Feel free to block cookies, but this may affect how well our Services work.</p>
 
 					<h3>Clear cookies</h3>
 					<p>You can remove all your data from our cookies.</p>
@@ -534,7 +609,7 @@
 				
 				<div id="accordionExample">
 					<h2>What cookies do we use?</h2>
-					<p>Cookies are small text files that are stored on your computer by your browser when you visit a website. Cookies can recognize and remember you, for example.</p>
+					<p>Cookies are small text files that are stored on your computer by your browser when you visit a website. Examples of cookie purposes are: logging into an account and acceptance of the Privacy & Cookie Statement. Our website can place these cookies for the following purposes:</p>
 					
 					<section class="cookie accordion-table">
 						<h3 class="accordion-table-title">Functional Cookies</h3>
@@ -775,11 +850,15 @@
 		
 			</div>
 
+
 			<div class="footer-column">
+
 
 				<div class="footer-column-header">Connect with GCC</div>
 
+
 				<ul class="footer-links" id="footer-social-links">
+
 
 					<li>
 						<div><img src="../images/TwitterIcon.svg" onerror="this.onerror=null; this.src='images/TwitterIcon.png'" alt="Twitter icon" /></div>
@@ -814,6 +893,7 @@
 						<a href="../GCCsocials.html" title="Go to Connect with GCC page" target="_self">Browse all</a>
 					</li>					
 				</ul>
+
 
 			</div>
 
@@ -856,6 +936,8 @@
 			
 		</div> <!-- End footerwrapper -->
 		
+		<div id="footer-base">
+			<nav aria-label="Glasgow Online corporate links">
 		<div id="footer-base">
 			<nav aria-label="Glasgow Online corporate links">
 				<ul>
@@ -1010,6 +1092,40 @@
 			var $button, $tooltip
 			$button = $('#analytical-accordion-table-toggle')
 			$tooltip = $('#analytical-accordion-table-content')
+			return $button.click(() => {
+			  if ($tooltip.attr('hidden') === 'hidden') {
+				$tooltip.removeAttr('hidden')
+				return $button.attr('aria-expanded', true)
+			  } else {
+				$tooltip.attr('hidden', true)
+				return $button.attr('aria-expanded', false)
+			  }
+			})
+		  })
+		}.call(this))
+
+		;(function () {
+		  $(document).ready(function () {
+			var $button, $tooltip
+			$button = $('#info-provided-accordion-table-toggle')
+			$tooltip = $('#info-provided-accordion-table-content')
+			return $button.click(() => {
+			  if ($tooltip.attr('hidden') === 'hidden') {
+				$tooltip.removeAttr('hidden')
+				return $button.attr('aria-expanded', true)
+			  } else {
+				$tooltip.attr('hidden', true)
+				return $button.attr('aria-expanded', false)
+			  }
+			})
+		  })
+		}.call(this))
+
+		;(function () {
+		  $(document).ready(function () {
+			var $button, $tooltip
+			$button = $('#tech-info-accordion-table-toggle')
+			$tooltip = $('#tech-info-accordion-table-content')
 			return $button.click(() => {
 			  if ($tooltip.attr('hidden') === 'hidden') {
 				$tooltip.removeAttr('hidden')

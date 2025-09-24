@@ -5591,6 +5591,12 @@ section.accordion-table, section.accordion-table .accordion-table-description,
 	padding-bottom: 0;
 }
 
+.legal-content .accordion-table{
+	border-top:0px solid transparent;
+	margin-top:0;
+	padding-top:0
+}
+
 #cards h2{
 	border-top:1px solid #F9F8F8;
 	margin-top:10px;
