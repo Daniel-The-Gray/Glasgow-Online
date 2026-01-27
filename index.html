@@ -1276,6 +1276,7 @@
 		$( "#header-options #search").click(function() { 
 			if (!$(" #header-wrapper ").hasClass("search-opened")) {
 				$(" #header-wrapper" ).addClass(" search-opened ");
+				document.getElementById("HeaderSearchInput").focus();
 			}
 		}) 
 

@@ -1496,6 +1496,10 @@ nav.priority-nav .single-link.new a::before{
 	display: none;
 }
 
+#header-wrapper.secondaryActive.search-opened #header-logo{
+	min-width: 159px;
+}
+
 #header-wrapper.search-opened #header-options{
 	justify-content:center;
 	flex-grow: 1;
@@ -2812,33 +2816,6 @@ a.most-visited-pages-btn:hover p>span{
 	max-width: 100% !important;
 }
 
-#homepage-tiles #schoolSearchForm .p-1{
-	padding:0 !important;
-	margin-bottom:15px;
-}
-
-@media (max-width: 1083px){
-	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem > div{
-		width: 100%;
-		margin-left: 0;
-	}
-
-	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem.f-x-left .copy{
-		width: 100%;
-		top: 25%;
-	}
-
-	#schoolSearchForm{
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	#homepage-tiles #schoolSearchForm .p-1{
-		width: 50%;
-		padding: 0 1rem !important;
-	}
-}
-
 #homepage-tiles #schoolSearchTile .form-title{
 	font-size: 1.25em;
 	font-family: 'Helvetica Neue Regular', 'Arial', "sans-serif";
@@ -2880,6 +2857,51 @@ a.most-visited-pages-btn:hover p>span{
 	font-family: 'Helvetica Neue Bold', 'Arial', "sans-serif";
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+#homepage-tiles #schoolSearchForm .p-1{
+	padding:0 !important;
+	margin-bottom:15px;
+}
+
+@media (max-width: 1083px){
+	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem > div{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem.f-x-left .copy{
+		width: 100%;
+		top: 25%;
+	}
+
+	#schoolSearchForm{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#homepage-tiles #schoolSearchForm .p-1{
+		width: calc(50% - 10px);
+		/* padding: 0 1rem !important; */
+		margin-bottom: 0;
+	}
+
+	#homepage-tiles #schoolSearchForm button[type="submit"] {
+		margin-top: 1rem;
+	}
+}
+
+@media (max-width: 800px){
+	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem.f-x-left .copy {
+		top: 33.3%;
+	}
+}
+
+@media (max-width: 650px){
+	#homepage-tiles #schoolSearchTile.tile.fullTile .heroItem.f-x-left .copy {
+		top: 50%;
+	}
 }
 
 #homepage-tiles #schoolSearchForm button[type="submit"]>span {
@@ -3006,7 +3028,7 @@ a.most-visited-pages-btn:hover p>span{
 	#homepage-tiles .tile .heroItem.f-y-center .tile-wrapper {
 		right: auto;
 		max-width: none;
-		padding: 16px 12px;
+		/* padding: 16px 12px; */
 	}
  }
 
@@ -3972,12 +3994,13 @@ youtube>iframe{
 }
 
 .news-school-logo{
-	margin-right:20px;
+	/* margin-right:20px; */
 }
 
 .news-school-logo>img{
 	height: 100%;
 	max-height: 116px;
+	margin-right:20px;
 }
 
 #news-article #section-template>.right,
@@ -7683,6 +7706,13 @@ footer{
 	padding: 0 5%;
 }
 
+@media only screen and (max-width:1083px){
+	#footer-wrapper{
+		padding: 0 12px;
+		flex-wrap: wrap;
+	}
+}
+
 .footer-column{
 	max-width: 260px;
 	/*width: 33.3333%;
@@ -7691,18 +7721,43 @@ footer{
 	padding:0 12px;
 }
 
+@media only screen and (max-width:1083px){
+	.footer-column{
+		width: 33.333%;
+		max-width: none;
+	}
+}
+
+@media only screen and (max-width:539px){
+	.footer-column{
+		width: 100%;
+	}
+}
+
 .footer-column:first-child{
 	padding-left: 0;
+}
+
+@media only screen and (max-width:1083px){
+	.footer-column:first-child{
+		padding-left: 12px;
+	}
 }
 
 .footer-column:last-child{
 	padding-right: 0;
 }
 
+@media only screen and (max-width:1083px){
+	.footer-column:last-child{
+		padding-right: 12px;
+	}
+}
+
 .footer-column-header{
 	/*font-size: 14.5pt;
 	color: #262626;*/
-	font-size: 11.5pt;
+	font-size: 11.25pt;
 	color: #616161;
 	font-family: 'Helvetica Neue Bold';
 	/*padding-bottom: 20px;
@@ -7713,7 +7768,7 @@ footer{
 }
 
 .footer-links{
-	padding: 0 0 15px 0;
+	/* padding: 0 0 15px 0; */
 	margin: 0;
 }
 
@@ -7731,9 +7786,11 @@ footer{
 	/*color: #394E5B;
 	font-size: 11pt;*/
 	color: #616161;
-	font-size: 9pt;
-	line-height: 1;
+	font-size: 8.25pt;
+	line-height: 16px;
 	text-decoration: none;
+	padding: 0;
+	font-family: 'Helvetica Neue Regular';
 }
 
 .footer-links a span,
@@ -7775,36 +7832,68 @@ footer{
 	margin: auto;
 	padding: 30px 5% 16px;
 	position: relative;
+	line-height: 25px;
+	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1083px) {
+	#footer-base{
+	  flex-direction: column;
+	  padding: 30px 24px 16px;
+	}
 }
 
 #footer-base>nav{
-	flex-grow: 2;
+	/* flex-grow: 2; */
+	order:2;
+	margin: 12px 0;
+	width: 100%;
 }
 
 #footer-base>nav>ul{
 	display: flex;
 	margin: 0;
+	flex-wrap: wrap;
 }
 
 #footer-base>nav>ul>li{
-	padding: 0 24px 4px 0;
+	padding: 6px 10px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+	#footer-base>nav>ul>li{
+    padding: 6px 4px 0 6px;
+
+  }
 }
 
 #footerLogo{
-	top: -130px;
+	/* top: -130px;
 	right: 5%;
-	position: absolute;
+	position: absolute; */
 	display:flex;
 	align-items:center;
+	order:1;
 }
 
 #footerLogo>img{
 	vertical-align:middle;
 	margin-right:40px;
+	order:2;
+}
+
+#footerLogo>a:last-child{
+	margin-right: 40px;
+	order:1;
+}
+
+#footerLogo>a:last-child>img{
+	height: 68px;
 }
 
 #footerLogo .adminOptions{
-	margin-right: 40px;
+	order:3;
+	margin-right:40px;
 }
 
 /*a[href^="#"]{
