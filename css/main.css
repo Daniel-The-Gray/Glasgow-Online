@@ -1181,12 +1181,13 @@ nav.priority-nav .single-link.new a::before{
 		top: 100%;
 		z-index: 700;
 		background:#f2f2f2;
+		border-radius: 0 !important;
+		margin-top: -2px;
 	}
 	
 	.nav-button-wrapper > button + ul {
 		border-color: rgba(0,0,0,.05) rgba(0,0,0,.05) #000;
-		/*margin-top: -2px;*/
-		margin-top: 0;
+		/*margin-top: 0;*/
 	}
 	
 	.nav-button-wrapper > [aria-expanded="true"] + ul, .nested-menu > [aria-expanded="true"] + ul{
@@ -7697,8 +7698,8 @@ footer{
 }
 
 #footer-wrapper{
-	/*justify-content: space-between;*/
-	border-bottom: 3px solid white;
+	/*justify-content: space-between;
+	border-bottom: 3px solid white;*/
 	display: flex;
 	flex-wrap: nowrap;
 	margin: 0 auto;
