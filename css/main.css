@@ -8016,6 +8016,456 @@ a.resource-download-zip>img{
 	font-size: 0.8125em;
 }
 
+/** Helpdesk styles **
+**/
+
+:root {
+  /* Brand */
+  --brand:         #00854B;   /* Primary green */
+  --brand-dark:    #00301B;   /* Nav background — deep green */
+  --brand-mid:     #005C33;   /* Hover / darker green */
+  --brand-light:   #E6F4EE;   /* Tinted background */
+  --brand-border:  #B3D9C7;   /* Light green border */
+
+  /* Neutrals */
+  --white:         #FFFFFF;
+  --bg:            #F3F3F3;   /* Page background */
+  --surface:       #FFFFFF;
+  --surface-2:     #F3F4F5;   /* Subtle inset */
+  --border:        #B1B4B6;   /* GOV.UK standard border grey */
+  --border-dark:   #505A5F;
+
+  /* Text — all WCAG AA on white */
+  --text-primary:  #1A1A1A;   /* 17.5:1 */
+  --text-secondary:#595959;   /* 7.0:1  */
+  --text-muted:    #767676;   /* 4.54:1 — AA minimum */
+
+  /* Status */
+  --success:       #00703C;   /* GOV.UK green — 4.5:1 on white */
+  --success-bg:    #E6F4EE;
+  --error:         #D4351C;   /* GOV.UK red */
+  --error-bg:      #FAEAE8;
+  --warning:       #994F00;   /* Accessible amber on white */
+  --warning-bg:    #FEF7E0;
+
+  /* Focus — high-visibility yellow (GOV.UK pattern) */
+  --focus-color:   #FFDD00;
+  --focus-text:    #1A1A1A;
+
+  /* Typography */
+  --font-body:     'Source Sans 3', Arial, sans-serif;
+  --font-mono:     'Source Code Pro', 'Courier New', monospace;
+
+  /* Sizing */
+  --radius:        4px;       /* Conservative — public sector */
+  --radius-md:     8px;
+  --touch-min:     44px;      /* WCAG 2.5.5 */
+}
+
+header.inverted{
+	background-color: #00844B;
+	padding: 0 !important;
+}
+
+header.inverted #header-wrapper{
+	background-color: #00844B;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 24px !important;
+}
+
+body>header.inverted,
+header.inverted a,
+header.inverted .nav-button-wrapper button,
+header.inverted .nav-button-wrapper button::after,
+header.inverted .nav__dropdown-toggle::after,
+header.inverted .adminOptions>div>a{
+	color: white;
+}
+
+ #helpdesk .adminOptions>div:first-child>a{
+	border-right: 1px solid white;
+ }
+
+header.inverted .adminOptions>div>a:hover>span{
+	border-bottom-color: white;
+}
+
+header.inverted .nav-button-wrapper > button[aria-expanded="false"]::before, 
+header.inverted nav.priority-nav .single-link a::before, 
+header.inverted .nav__dropdown-toggle::before{
+	background-color: white;
+}
+
+ #helpdesk #breadcrumbs{
+	color: #262626;
+	font-family: 'Helvetica Neue Regular', Arial, "sans-serif";
+	border-bottom: 1px solid #00854B;
+	background-color: white;
+ }
+
+ #helpdesk .breadcrumbs-wrapper{
+	padding: 20px 24px 18px 24px;
+	max-width: 1200px;
+	margin: auto;
+ }
+
+ #helpdesk #breadcrumbs-trail{
+	row-gap: 8px;
+	padding: 0;
+	margin-bottom: 12px;
+ }
+
+ #helpdesk #breadcrumbs a{
+	color: #262626 !important;
+	font-family: 'Helvetica Neue Light', Arial, "sans-serif";
+ }
+
+ #helpdesk #page-title{
+	margin: 0 ;
+	font-family: 'Helvetica Neue Bold', Arial, "sans-serif";
+} 
+
+ #helpdesk #page-title span{
+	color: #00844B;
+ }
+
+#helpdesk .main-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 28px 24px 64px;
+}
+
+ .main-grid{
+	display: grid;
+	grid-template-columns: 1fr 320px;
+	gap: 24px;
+	align-items: start;
+ }
+
+ #helpdesk .main-wrapper #main-content{
+	
+ }
+
+ .form-card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+}
+
+.form-card-header {
+	padding: 18px 24px;
+	border-bottom: 2px solid var(--brand);
+	background: var(--surface-2);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.form-card-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* ── Form fields ── */
+.form-body { padding: 28px 24px; }
+
+.field-group { margin-bottom: 24px; }
+.field-group:last-child { margin-bottom: 0; }
+
+.two-col-fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.field-label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	margin-bottom: 4px;
+	line-height: 1.4;
+}
+
+.field-hint-text {
+	display: block;
+	font-size: 1rem;
+	color: var(--text-secondary);
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
+
+.required-marker {
+  color: var(--error);
+  font-weight: 700;
+  margin-left: 3px;
+  /* Screen reader: aria-hidden on this, "required" in aria-required */
+}
+
+.input-mock {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: var(--touch-min);
+	border: 2px solid var(--border-dark);
+	border-radius: var(--radius);
+	padding: 10px 14px;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--text-muted);
+	background: var(--surface);
+	gap: 8px;
+}
+
+
+.input-mock.filled {
+  color: var(--text-primary);
+  background: var(--surface-2);
+  border-color: var(--border-dark);
+}
+.input-mock.focused {
+  border-color: var(--brand);
+  outline: 3px solid var(--focus-color);
+  outline-offset: 0;
+  color: var(--text-primary);
+}
+.input-mock-select { justify-content: space-between; }
+.input-mock-select::after {
+  content: '▾';
+  font-size: 1rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.textarea-mock {
+  min-height: 120px;
+  align-items: flex-start;
+  padding-top: 12px;
+}
+
+/* ── Category grid ── */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.cat-option {
+  border: 2px solid var(--border-dark);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 1rem;           /* 16px */
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface);
+  min-height: var(--touch-min);
+  transition: border-color .12s, background .12s;
+  line-height: 1.3;
+}
+.cat-option:hover {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  color: var(--brand-dark);
+}
+.cat-option.selected {
+  border-color: var(--brand);
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  box-shadow: inset 0 0 0 1px var(--brand);
+}
+.cat-icon {
+  width: 32px; height: 32px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.cat-option.selected .cat-icon {
+  background: var(--brand-border);
+}
+
+/* ── Attachment zone ── */
+.attach-zone {
+  border: 3px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  background: var(--surface-2);
+  line-height: 1.5;
+}
+.attach-zone-icon { font-size: 1.75rem; margin-bottom: 8px; display: block; }
+.attach-zone strong {
+  display: block; font-size: 1rem;
+  font-weight: 700; color: var(--text-primary); margin-bottom: 4px;
+}
+.attach-types {
+  display: flex; justify-content: center; gap: 8px;
+  margin-top: 12px; flex-wrap: wrap;
+}
+.attach-type {
+  font-size: 0.875rem; font-weight: 600;
+  background: var(--surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius); padding: 4px 10px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+/* ── Submit ── */
+.submit-area {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.submit-note {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  display: flex; align-items: flex-start; gap: 6px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+/* GDS-style primary button */
+.btn-submit {
+  background: var(--brand);
+  color: var(--white);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;      /* 17px — GDS button size */
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: var(--touch-min);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 3px 0 var(--brand-mid);  /* GDS button shadow */
+  transition: background .12s, box-shadow .12s, transform .08s;
+}
+.btn-submit:hover {
+  background: var(--brand-mid);
+  box-shadow: 0 3px 0 var(--brand-dark);
+}
+.btn-submit:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+/* Contrast: white #FFF on brand #00854B = 5.0:1 ✓ WCAG AA */
+
+/* ═══════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════ */
+ #helpdesk .sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+ .side-card{
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+}
+
+.side-card-header{
+	padding: 14px 18px;
+	border-bottom: 2px solid var(--brand);
+	font-size: 0.9375rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	background: var(--surface-2);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-transform: none;
+ }
+
+ .side-card-body{
+	padding: 20px;
+}
+
+.support-info__list{
+	
+}
+
+.description-item{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 9px 0;
+	border-bottom: 1px solid rgb(243, 243, 243);;
+}
+
+.support-info__list .description-item{
+	justify-content: space-between;
+}
+
+.support-info__list dt{
+	color: rgb(89, 89, 89);
+	font-family: 'Helvetica Neue Regular', Arial, "sans-serif";
+	font-weight: 500;
+}
+
+.support-info__list dd{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.email-note{
+	padding: 12px 14px;
+	background-color: rgb(230, 244, 238);
+	border-radius: 4px;
+	margin-top: 16px;
+	border-left: 4px solid #00854B;
+}
+
+.quick-help__list{
+
+}
+
+.quick-help__item{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.quick-help__list dt{
+
+}
+
+.quick-help__list dt a{
+	font-weight: 700;
+	color: #262626;
+}
+
+.quick-help__list dd{
+
+}
+
+/** End helpdesk styles **
+**/
+
+
+
 /* Gateway styles */
 .resource-page .accordion-table h2{
 
